@@ -1,0 +1,29 @@
+{
+
+"compilerOptions": {
+    "target": "ES2021", // Target ECMAScript 6
+    "module": "commonjs", // Use CommonJS for modules
+    "strict": false, // Enable strict type checking
+    "alwaysStrict": true,
+    "allowJs": false,
+    "noEmit": true,
+    "noImplicitOverride": true,
+    "useUnknownInCatchVariables": false,
+    "sourceMap": true,
+    "allowUnreachableCode": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+   // "noUnsedLocals": true,
+    // "esModuleInterop": true, // Allows default imports from CommonJS
+    // "skipLibCheck": true, // Skip checking library files for type errors
+    // "outDir": "./dist", // Output directory for compiled files
+    // "rootDir": "./src", // Root directory of source files
+    // "resolveJsonModule": true, // Allow importing JSON modules
+    // "moduleResolution": "node", // Node-style module resolution
+    // "allowSyntheticDefaultImports": true // Allow default imports in 
+  },
+
+  "compileOnSave": true,
+  "exclude": ["**/node_modules/*"]
+}
