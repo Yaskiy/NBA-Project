@@ -4,7 +4,11 @@
     "@types/node": "^22.10.1",
     "typescript": "^5.7.2"
   },
-  "scripts": {},
+  "scripts": {
+
+    "test": "npx playwright test"
+  }
+  ,
   "dependencies": {
     "playwright": "^1.49.1"
   }
