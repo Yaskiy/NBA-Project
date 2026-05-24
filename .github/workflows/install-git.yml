@@ -1,0 +1,38 @@
+name: Ensure Git available in CI
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  ensure-git:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Ensure Git on Ubuntu
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git
+
+      - name: Ensure Git on Windows
+        if: matrix.os == 'windows-latest'
+        shell: powershell
+        run: |
+          choco install git -y
+
+      - name: Ensure Git on macOS
+        if: matrix.os == 'macos-latest'
+        run: |
+          brew update || true
+          brew install git || true
+
+      - name: Verify git version
+        run: git --version

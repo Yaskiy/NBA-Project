@@ -2,11 +2,18 @@
   "devDependencies": {
     "@playwright/test": "^1.49.1",
     "@types/node": "^22.10.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "ts-node": "^10.9.1"
   },
   "scripts": {
-
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report",
+    "generate-tests": "ts-node scripts/workflow-manager.ts",
+    "generate-tests:help": "echo 'Usage: npm run generate-tests -- https://example.com \\\"Feature Name\\\" \\\"feature-name\\\"'",
+    "mcp:codegen": "npx playwright codegen"
   }
   ,
   "dependencies": {
