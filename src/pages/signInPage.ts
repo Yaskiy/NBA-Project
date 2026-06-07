@@ -10,7 +10,7 @@ export class SignInpage {
          } 
 
 
-private _signInPageHeader = (): Locator => this.page.locator('.SignIn_title__l6maW')
+private _signInPageHeader = (): Locator => this.page.locator('.EmailFirst_title__Y_9uz')
 private _emailField = (): Locator => this.page.getByTestId('email')
 private _passwordField = (): Locator => this.page.getByTestId('password')
 private _signInBtn = (): Locator => this.page.getByRole('button', {name: 'Sign In'})
